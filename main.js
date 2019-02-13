@@ -3,7 +3,7 @@ function onLoad() {
   marker.addEventListener('markerFound', () => {});
 
   const carObj = document.getElementById('car-obj');
-  carObj.addEventListener('click', () => {
+  carObj.addEventListener('touchstart', () => {
     alert('touched.');
   });
 }
