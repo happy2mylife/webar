@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <head>
-  <!-- ① A-Frame を読み込む -->
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-  <!-- ② AR.js を読み込む -->
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
   <script src="main.js"></script>
 </head>
 <body style='margin: 0; overflow: hidden;' onload="onLoad()">
-    <a-assets>
-        <a-asset-item id="car-obj" src="car.obj"></a-asset-item>
-        <a-asset-item id="car-mtl" src="car.mtl"></a-asset-item>
-    </a-assets>
-<!-- ③ シーンを追加 -->
-<a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled:false">
+  <a-assets>
+    <img id="kameImage" src="./kame.png">
+</a-assets>
 
-  <!-- ④ マーカーを追加 ここから -->
+<a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled:false">
   <a-marker preset="custom" type="pattern" url="pattern-marker.patt" id="anchor">
-      <a-obj-model id="car-obj" src="#car-obj" mtl="#car-mtl" position="0 0 0" rotation="0 90 0" scale="0.005 0.005 0.005" visible="true"></a-obj-model>
-      <a-text position="0 0 0" rotation="0 0 90" value="Hello, World!" color="#ff0000"></a-text>
-    </a-marker>
-  <a-sky color="#ff0000"></a-sky>
-  <!-- ⑥ カメラを追加 -->
+    <a-image width="1" height="1" src="#kameImage"></a-image>
+  </a-marker>
   <a-entity camera></a-entity>
 </a-scene>
 </body>
