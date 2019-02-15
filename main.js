@@ -1,8 +1,7 @@
 function onLoad() {
   $('.start').on('click', function() {
     //    $(this).css('visibility', 'hidden');
-    $(this).css('display', 'none');
-    $(this).css('z-index', 0);
+    $('main-container').remove();
     $('a-scene').css('z-index', 999);
   });
 }
