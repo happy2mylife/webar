@@ -6,12 +6,4 @@ function onLoad() {
   carObj.addEventListener('click', () => {
     alert('touched.');
   });
-
-  AFRAME.registerComponent('cursor-listener', {
-    init: function() {
-      this.el.addEventListener('click', function(evt) {
-        alert(evt.detail.intersection.point);
-      });
-    }
-  });
 }
