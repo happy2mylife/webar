@@ -5,15 +5,7 @@
   <script src="main.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<script>
-    AFRAME.registerComponent('cursor-listener', {
-    init: function() {
-      this.el.addEventListener('click', function(evt) {
-        alert(evt.detail.intersection.point);
-      });
-    }
-  });
-</script>
+
 <body style='margin: 0; overflow: hidden;' onload="onLoad()">
     <a-assets>
         <a-asset-item id="car-obj" src="car.obj"></a-asset-item>
