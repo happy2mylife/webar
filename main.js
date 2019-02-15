@@ -4,7 +4,7 @@ function onLoad() {
     $('a-scene').css('z-index', 100);
   });
 
-  $('.marker').addEventListener('markerFound', () => {
+  $('#marker').addEventListener('markerFound', () => {
     $('.controller').fadeIn('slow', () => {
       $(this).css('z-index', 110);
     });
