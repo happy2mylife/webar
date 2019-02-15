@@ -11,3 +11,10 @@
 .text-center {
   text-align: center;
 }
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  background: #ff730d;
+  z-index: 100;
+}
