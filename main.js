@@ -1,5 +1,5 @@
 function onLoad() {
-  $('.main-container').on('click', function() {
+  $('.start').on('click', function() {
     //    $(this).css('visibility', 'hidden');
     $(this).css('display', 'none');
     $(this).css('z-index', 0);
