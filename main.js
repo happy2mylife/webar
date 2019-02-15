@@ -2,6 +2,7 @@ function onLoad() {
   $('.start').on('click', function() {
     $('.main-container').remove();
     $('a-scene').css('z-index', 100);
+    $('#marker').attr('url', 'pattern-marker.patt');
   });
 
   $('#marker')[0].addEventListener('markerFound', () => {
