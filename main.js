@@ -6,7 +6,7 @@ function onLoad() {
 
   $('#marker')[0].addEventListener('markerFound', () => {
     $('.controller').fadeIn('slow', () => {
-      $(this).css('z-index', 110);
+      $('.controller').css('z-index', 110);
     });
   });
 }

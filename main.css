@@ -40,6 +40,12 @@
 }
 
 .controller {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  padding: 0;
+  margin: 0;
   display: none;
   z-index: -50;
 }
