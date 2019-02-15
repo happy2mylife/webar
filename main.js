@@ -1,10 +1,14 @@
 function onLoad() {
-$(window).on('touchmove.noScroll', function(e) {
-    e.preventDefault();
-});  
   $('.start').on('click', function() {
-    //    $(this).css('visibility', 'hidden');
     $('.main-container').remove();
-    $('a-scene').css('z-index', 999);
+    $('a-scene').css('z-index', 100);
+  });
+
+  $('.marker').addEventListener('markerFound', () => {
+    $('.controller')
+      .fadeIn(2000)
+      .queue(() => {
+        $(this).css('z-index', 110);
+      });
   });
 }
