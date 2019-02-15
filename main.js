@@ -3,8 +3,8 @@ function onLoad() {
     $('.main-container')
       .fadeOut('slow')
       .queue(() => {
-        $('.main-container').attr('display', 'hidden');
-        $('a-scene').atrr('display', 'visible');
+        $('.main-container').css('display', 'hidden');
+        $('a-scene').css('display', 'visible');
         const marker = document.getElementById('anchor');
         marker.addEventListener('markerFound', () => {
           const rect = carObj.getBoundingClientRect();
