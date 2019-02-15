@@ -5,10 +5,8 @@ function onLoad() {
   });
 
   $('.marker').addEventListener('markerFound', () => {
-    $('.controller')
-      .fadeIn(2000)
-      .queue(() => {
-        $(this).css('z-index', 110);
-      });
+    $('.controller').fadeIn('slow', () => {
+      $(this).css('z-index', 110);
+    });
   });
 }
