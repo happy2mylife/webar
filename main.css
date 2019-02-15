@@ -18,3 +18,23 @@
   background: #ff730d;
   z-index: 100;
 }
+
+.field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  width: 100%;
+}
+
+.start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
