@@ -22,6 +22,6 @@ function onLoad() {
   });
 
   $('#play').on('click', () => {
-    alert('play');
+    $('#video').play();
   });
 }
