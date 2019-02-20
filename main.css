@@ -54,3 +54,13 @@
   margin: 0;
   z-index: 110;
 }
+
+.movie {
+  width: 60px;
+  position: absolute;
+  bottom: 70px;
+  right: 10px;
+  padding: 0;
+  margin: 0;
+  z-index: 110;
+}

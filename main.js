@@ -20,4 +20,8 @@ function onLoad() {
     $('.controller').css('z-index', -50);
     $('.controller').css('display', 'none');
   });
+
+  $('#play').on('click', () => {
+    alert('play');
+  });
 }
