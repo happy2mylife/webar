@@ -38,3 +38,7 @@ function onLoad() {
       console.log(err.name + ": " + err.message);
     });
 }
+
+function displayARObj() {
+  arObj.style.visibility = "visible";
+}

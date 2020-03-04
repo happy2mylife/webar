@@ -5,41 +5,11 @@
   <script type="text/javascript" src="./js/geo.js"></script>
   <script type="text/javascript" src="./js/qr-read.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
-  <style>
-    /* 全体のレイアウト調整 */
-    
-    #contents {
-      display: flex;
-      width: 650px;
-    }
-    
-    #camera,
-    #picture,
-    #result {
-      justify-content: center;
-      margin: 5px;
-    }
-    /* リーダー部分 */
-    
-    #picture {
-      display: none;
-    }
-    
-    #result {
-      border: 1px solid gray;
-      width: 300px;
-      height: 200px;
-      padding: 10px;
-    }
-    
-    small {
-      color: gray;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 
-<body style='margin: 0; overflow: hidden;' onload="onLoad();">
-  <a rel="ar" href="./assets/toy_biplane.usdz">
+<body onload="onLoad();">
+  <a rel="ar" href="./assets/toy_biplane.usdz" id="arObj" class="hidden">
     <img src="./assets/toy_biplane.jpg" style="width: 30%; height: 30%;">
   </a>
   <p>あなたの現在位置</p>

@@ -21,6 +21,8 @@ function checkPicture() {
     canvas.style.display = 'block';
     video.style.display = 'none';
     video.pause();
+
+    displayARObj();
   }
   //----------------------
   // 存在しない場合
