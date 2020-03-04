@@ -15,6 +15,7 @@ function checkPicture() {
   if (code) {
     // 結果を表示
     setQRResult("#result", code.data); // 文字列
+    setARCustomBanner(escapeHTML(code.data))
     drawLine(ctx, code.location); // 見つかった箇所に線を引く
 
     // video と canvas を入れ替え

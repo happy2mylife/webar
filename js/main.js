@@ -1,6 +1,9 @@
 let video;
 let canvas;
 let ctx;
+let urlInQR;
+
+const arObjPlane = "./assets/toy_biplane.usdz";
 
 /**
  * jQuery style wrapper
@@ -44,6 +47,11 @@ function onLoad() {
     .catch((err) => {
       console.log(err.name + ": " + err.message);
     });
+
+
+  arObj.addEventListener("message", (event) => {
+    window.location.href = urlInQR;
+  }, false);
 }
 
 function displayARObj() {
@@ -51,4 +59,14 @@ function displayARObj() {
   video.srcObject.getVideoTracks()[0].stop();
   arObj.style.visibility = "visible";
   arObj.click();
+}
+
+function setARCustomBanner(data) {
+
+  callToAction = `callToAction=Jump%20to%20site`;
+  checkoutTitle = `checkoutTitle=映画ログプラス`;
+  checkoutSubtitle = `checkoutSubtitle=映画の魅力再発見`;
+  urlInQR = data;
+  //  arObj.href = `${arObjPlane}#custom=${urlInQR}`;
+  arObj.href = `${arObjPlane}#${callToAction}&${checkoutTitle}&${checkoutSubtitle}`;
 }
