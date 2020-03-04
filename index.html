@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 
 <head>
+  <script type="text/javascript" src="./js/jsQR.js"></script>
+  <script type="text/javascript" src="./js/geo.js"></script>
+  <script type="text/javascript" src="./js/qr-read.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
+  <style>
+    /* 全体のレイアウト調整 */
+    
+    #contents {
+      display: flex;
+      width: 650px;
+    }
+    
+    #camera,
+    #picture,
+    #result {
+      justify-content: center;
+      margin: 5px;
+    }
+    /* リーダー部分 */
+    
+    #picture {
+      display: none;
+    }
+    
+    #result {
+      border: 1px solid gray;
+      width: 300px;
+      height: 200px;
+      padding: 10px;
+    }
+    
+    small {
+      color: gray;
+    }
+  </style>
 </head>
 
 <body style='margin: 0; overflow: hidden;' onload="onLoad();">
@@ -10,6 +44,19 @@
   </a>
   <p>あなたの現在位置</p>
   <div id="show_result"></div>
+
+  <section id="contents">
+    <!-- カメラ映像 -->
+    <video id="camera" width="300" height="200" muted></video>
+
+    <!-- 処理用 -->
+    <canvas id="picture" width="300" height="200"></canvas>
+
+    <!-- 読み取り結果 -->
+    <div id="result">
+      <small>※ここに読み取り結果が表示されます※</small>
+    </div>
+  </section>
 </body>
 
 </html>
