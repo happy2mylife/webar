@@ -67,6 +67,7 @@ function setARCustomBanner(data) {
   checkoutTitle = `checkoutTitle=映画ログプラス`;
   checkoutSubtitle = `checkoutSubtitle=映画の魅力再発見`;
   urlInQR = data;
-  //  arObj.href = `${arObjPlane}#custom=${urlInQR}`;
-  arObj.href = `${arObjPlane}#${callToAction}&${checkoutTitle}&${checkoutSubtitle}`;
+  arObj.href = `${arObjPlane}#custom=${urlInQR}`;
+  // TODO callToactionで表示されず・・
+  //arObj.href = `${arObjPlane}#${callToAction}&${checkoutTitle}&${checkoutSubtitle}`;
 }
