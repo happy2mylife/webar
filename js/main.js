@@ -37,7 +37,6 @@ function onLoad() {
       video.srcObject = stream;
       video.onloadedmetadata = (e) => {
         video.play();
-
         // QRコードのチェック開始
         checkPicture();
       };
@@ -48,6 +47,8 @@ function onLoad() {
 }
 
 function displayARObj() {
+  // TDO QR読み込み用のカメラを止めないと、VR用のカメラが起動しないと思われる
+  video.srcObject.getVideoTracks()[0].stop();
   arObj.style.visibility = "visible";
   arObj.click();
 }
