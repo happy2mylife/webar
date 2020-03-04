@@ -70,15 +70,6 @@ function setQRResult(id, data) {
   $(id).innerHTML = escapeHTML(data);
 }
 
-/**
- * jQuery style wrapper
- *
- * @param {string} selector
- * @return {Object}
- */
-function $(selector) {
-  return (document.querySelector(selector));
-}
 
 /**
  * HTML表示用に文字列をエスケープする

@@ -2,6 +2,16 @@ let video;
 let canvas;
 let ctx;
 
+/**
+ * jQuery style wrapper
+ *
+ * @param {string} selector
+ * @return {Object}
+ */
+function $(selector) {
+  return (document.querySelector(selector));
+}
+
 function onLoad() {
   video = $("#camera"); // === document.querySelector("#camera");
   canvas = $("#picture"); // === document.querySelector("#picture");
@@ -15,9 +25,7 @@ function onLoad() {
   const constraints = {
     audio: false,
     video: {
-      width: 300,
-      height: 200,
-      facingMode: "user" // フロントカメラを利用する
+      facingMode: "environment"
     }
   };
 
@@ -41,4 +49,5 @@ function onLoad() {
 
 function displayARObj() {
   arObj.style.visibility = "visible";
+  arObj.click();
 }
