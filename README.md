@@ -8,6 +8,6 @@
   
 - site url
   - https://infallible-joliot-0a203b.netlify.com
-  
-- jsQR
-  -  https://github.com/cozmo/jsQR
+
+- other
+  - Webでobjから変換したダースベイダー等のusdzが読みこまれない
