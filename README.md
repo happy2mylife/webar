@@ -4,10 +4,10 @@
   - https://developer.apple.com/jp/augmented-reality/quick-look/
 
 - published on netlify
-  - https://app.netlify.com/sites/goofy-lumiere-fddf91/overview
+  - https://app.netlify.com/sites/infallible-joliot-0a203b/overview
   
 - site url
-  - https://goofy-lumiere-fddf91.netlify.com/
-
+  - https://infallible-joliot-0a203b.netlify.com
+  
 - jsQR
   -  https://github.com/cozmo/jsQR
