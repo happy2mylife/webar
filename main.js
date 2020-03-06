@@ -35,9 +35,9 @@ function onLoad() {
         mesh.geometry.computeFaceNormals();
         mesh.geometry.computeVertexNormals();
       });
-      meshes.scale.set(1, 1, 1);
+      meshes.scale.set(0.5, 0.5, 0.5);
       meshes.rotation.set(0, Math.PI, 0);
-      meshes.position.set(0, 0, 0);
+      meshes.position.set(1, 1, 1);
       scene.add(meshes);
       render();
       tick();
