@@ -20,7 +20,7 @@ function onLoad() {
   light.position.set(1, 1, 1);
 
   cube = new THREE.Mesh(geometry, material);
-  scene.add(cube);
+  //  scene.add(cube);
   scene.add(light);
   camera.position.z = 5;
 
@@ -30,16 +30,21 @@ function onLoad() {
 
     const objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.load('./obj/earth.obj', (object) => {
-
-      const mesh = object;
-      this.scene.add(mesh);
-
+    objLoader.load('./obj/earth.obj', (meshes) => {
+      meshes.children.forEach(function(mesh) {
+        mesh.geometry.computeFaceNormals();
+        mesh.geometry.computeVertexNormals();
+      });
+      meshes.scale.set(1, 1, 1);
+      meshes.rotation.set(0, Math.PI, 0);
+      meshes.position.set(0, 0, 0);
+      scene.add(meshes);
+      render();
+      tick();
     });
   });
 
-  render();
-  tick();
+
 
 }
 
