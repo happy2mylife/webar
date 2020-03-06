@@ -5,7 +5,6 @@ let cube;
 let objLoader;
 
 function onLoad() {
-  objLoader = new THREE.TDSLoader();
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.set(0, 0, +1000);
@@ -24,8 +23,19 @@ function onLoad() {
   scene.add(cube);
   scene.add(light);
   camera.position.z = 5;
-  objLoader.load("./obj/text.3ds", (obj) => {
-    scene.add(obj);
+
+  const mtlLoader = new THREE.MTLLoader();
+  mtlLoader.load('./obj/earth.mtl', (materials) => {
+    materials.preload();
+
+    const objLoader = new THREE.OBJLoader();
+    objLoader.setMaterials(materials);
+    objLoader.load('./obj/earth.obj', (object) => {
+
+      const mesh = object;
+      this.scene.add(mesh);
+
+    });
   });
 
   render();
