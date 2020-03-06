@@ -25,19 +25,19 @@ function onLoad() {
   camera.position.z = 5;
 
   const mtlLoader = new THREE.MTLLoader();
-  mtlLoader.load('./obj/earth.mtl', (materials) => {
+  mtlLoader.load('./obj/hakaman.mtl', (materials) => {
     materials.preload();
 
     const objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.load('./obj/earth.obj', (meshes) => {
+    objLoader.load('./obj/hakaman.obj', (meshes) => {
       meshes.children.forEach(function(mesh) {
         mesh.geometry.computeFaceNormals();
         mesh.geometry.computeVertexNormals();
       });
-      meshes.scale.set(0.5, 0.5, 0.5);
+      meshes.scale.set(1, 1, 1);
       meshes.rotation.set(0, Math.PI, 0);
-      meshes.position.set(1, 1, 1);
+      meshes.position.set(0, 0, 0);
       scene.add(meshes);
       render();
       tick();
